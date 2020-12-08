@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:schema xmlns:w="http://schemas.microsoft.com/office/word/2010/wordprocessing">
+	<w:element name="document">
+		<w:complexType>
+			<w:sequence>
+				<w:element name="body">
+					<w:complexType>
+						<w:sequence>
+							<w:element name="p">
+								<w:complexType>
+									<w:sequence>
+										<w:element name="r">
+											<w:complexType>
+												<w:sequence>
+													<w:element name="t" type="xs:string">
+														<w:simpleType>
+															<w:attribute name="xsl:space"/>
+														</w:simpleType>
+													</w:element>
+												</w:sequence>
+											</w:complexType>
+										</w:element>
+										<w:element name="r">
+											<w:complexType>
+												<w:sequence>
+													<w:element name="rPr">
+														<w:complexType>
+															<w:sequence>
+																<w:element name="i"/>
+															</w:sequence>
+														</w:complexType>
+													</w:element>
+													<w:element name="t" type="xs:string"/>
+												</w:sequence>
+											</w:complexType>
+										</w:element>
+										<w:element name="bookmarkStart">
+											<w:simpleType>
+												<w:attribute name="id"/>
+												<w:attribute name="name"/>
+											</w:simpleType>
+										</w:element>
+										<w:element name="bookmarkEnd">
+											<w:simpleType>
+												<w:attribute name="id"/>
+											</w:simpleType>
+										</w:element>
+										<w:element name="r">
+											<w:complexType>
+												<w:sequence>
+													<w:element name="rPr">
+														<w:complexType>
+															<w:sequence>
+																<w:element name="i"/>
+															</w:sequence>
+														</w:complexType>
+													</w:element>
+													<w:element name="t" type="xs:string"/>
+												</w:sequence>
+												<w:attribute name="rsidRPr"/>
+											</w:complexType>
+										</w:element>
+										<w:element name="r">
+											<w:complexType>
+												<w:sequence>
+													<w:element name="t" type="xs:string">
+														<w:simpleType>
+															<w:attribute name="xml:space"/>
+														</w:simpleType>
+													</w:element>
+												</w:sequence>
+											</w:complexType>
+										</w:element>
+										<w:element name="r">
+											<w:complexType>
+												<w:sequence>
+													<w:element name="rPr">
+														<w:complexType>
+															<w:sequence>
+																<w:element name="u">
+																	<w:simpleType>
+																		<w:attribute name="val"/>
+																	</w:simpleType>
+																</w:element>
+															</w:sequence>
+														</w:complexType>
+													</w:element>
+													<w:element name="t" type="xs:string"/>
+												</w:sequence>
+												<w:attribute name="rsidRPr"/>
+											</w:complexType>
+										</w:element>
+										<w:element name="r">
+											<w:complexType>
+												<w:sequence>
+													<w:element name="t" type="xs:string">
+														<w:simpleType>
+															<w:attribute name="xml:space"/>
+														</w:simpleType>
+													</w:element>
+												</w:sequence>
+											</w:complexType>
+										</w:element>
+										<w:element name="r">
+											<w:complexType>
+												<w:sequence>
+													<w:element name="rPr">
+														<w:complexType>
+															<w:sequence>
+																<w:element name="b"/>
+															</w:sequence>
+														</w:complexType>
+													</w:element>
+													<w:element name="t" type="xs:string">
+														<w:simpleType>
+															<w:attribute name="xsl:space"/>
+														</w:simpleType>
+													</w:element>
+												</w:sequence>
+												<w:attribute name="rsidRPr"/>
+											</w:complexType>
+										</w:element>
+									</w:sequence>
+									<w:attribute name="rsidR"/>
+									<w:attribute name="rsidRDefault"/>
+								</w:complexType>
+							</w:element>
+							<w:element name="sectPr">
+								<w:complexType>
+									<w:sequence>
+										<w:element name="pgSz">
+											<w:simpleType>
+												<w:attribute name="w"/>
+												<w:attribute name="h"/>
+											</w:simpleType>
+										</w:element>
+										<w:element name="pgMar">
+											<w:simpleType>
+												<w:attribute name="top"/>
+												<w:attribute name="right"/>
+												<w:attribute name="bottom"/>
+												<w:attribute name="left"/>
+												<w:attribute name="header"/>
+												<W:attribute name="footer"/>
+												<w:attribute name="gutter"/>
+											</w:simpleType>
+										</w:element>
+										<w:element name="cols">
+											<w:simpleType>
+												<w:attribute name="space"/>
+											</w:simpleType>
+										</w:element>
+										<w:element name="docGrid">
+											<w:simpleType>
+												<w:attribute name="linePitch"/>
+											</w:simpleType>
+										</w:element>
+									</w:sequence>
+									<w:attribute name="rsidR"/>
+								</w:complexType>
+							</w:element>
+						</w:sequence>
+					</w:complexType>
+				</w:element>
+			</w:sequence>
+		</w:complexType>
+	</w:element>
+</w:schema>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="">
+	<xs:element name="fabrica">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="coche">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="pieza">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="numero_referencia">
+											<xs:simpleType>
+												<xs:restriction base="xs:integer">
+													<xs:pattern value="[A-Z][0-9]{4}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="nombre"
+											type="xs:string"/>
+										<xs:element name="peso">
+											<xs:simpleType>
+												<xs:restriction base="xs:decimal">
+													<xs:minExclusive value="0"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="stock">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="Si"/>
+													<xs:enumeration value="No"/>
+													<xs:minExclusive value="0"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="procedencia">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Producida"/>
+												<xs:enumeration value="Comprada"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:element name="cadena_montaje">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="obrero">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="nombre">
+																<xs:simpleType>
+																	<xs:restriction base="integer">
+																		<xs:maxLength value="35"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:element>
+															<xs:element name="apellidos">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:maxLength value="70"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:element>
+															<xs:element name="direccion" type="xs:string"/>
+															<xs:element name="localidad">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:maxLength value="100"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															<xs:element name="codigo_postal">
+																<xs:simpleType>
+																	<xs:restriction base="xs:integer">
+																		<xs:length value="5"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:element>
+															<xs:element name="provincia">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:maxLength value="100"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															<xs:element name="fecha_incorpracion" type="xs:date"/>
+														</xs:sequence>
+														<xs:attribute name="dni">
+															<xs:simpleType>
+																<xs:restriction base="string">
+																	<xs:pattern value="([A-Z])+[1-9][0-9]{7}[A-Z]"/>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="pintores">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="nombre">
+																<xs:simpleType>
+																	<xs:restriction base="integer">
+																		<xs:maxLength value="35"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:element>
+															<xs:element name="apellidos">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:maxLength value="70"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:element>
+															<xs:element name="direccion" type="xs:string"/>
+															<xs:element name="localidad" type="xs:string"/>
+															<xs:element name="codigo_postal">
+																<xs:simpleType>
+																	<xs:restriction base="xs:integer">
+																		<xs:length value="5"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:element>
+															<xs:element name="provincia" type="xs:string"/>
+															<xs:element name="fecha_incorpracion" type="xs:date"/>
+															<xs:element name="fecha_examen" type="xs:date"/>
+														</xs:sequence>
+														<xs:attribute name="dni">
+															<xs:simpleType>
+																<xs:restriction base="string">
+																	<xs:pattern value="([A-Z])+[1-9][0-9]{7}[A-Z]"/>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name=num_bastidor>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:pattern value="[0-9A-HL-NPR-Z]{17}"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
